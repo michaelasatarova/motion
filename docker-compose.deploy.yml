@@ -13,7 +13,7 @@ services:
 
 
   backend:
-    image: backend:latest
+    image: registry.gitlab.propulsion-home.ch/michaela-atarova/week-7/day-2/motion:latest
     restart: always
     env_file:
       - ./envs/prod.env
