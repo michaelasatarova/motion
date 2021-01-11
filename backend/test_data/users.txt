@@ -1,0 +1,12 @@
+{ "password": "passwd123",  "is_superuser": 1,  "email": "admin@example.com",  "username": "admin",  "first_name": "Admin",  "last_name": "Admin", "city":"Zurich"}
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Patrick@example.com",  "username": "Patrick",  "first_name": "Patrick",  "last_name": "Roth" , "city":"Adliswil" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Immaunel@example.com",  "username": "Immanuel",  "first_name": "Immanuel",  "last_name": "Jaeggi" , "city":"Wetzikon" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Michaela@example.com",  "username": "Michaela",  "first_name": "Michaela",  "last_name": "Satarova" , "city":"Gersau"}
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Michal@example.com",  "username": "Michal",  "first_name": "Michal",  "last_name": "Wyszowski" , "city":"Surbiton"}
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Salvatore@example.com",  "username": "Salvatore",  "first_name": "Salvatore",  "last_name": "Dinini" , "city":"Zurich"}
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Michelle@example.com",  "username": "Michelle",  "first_name": "Michelle",  "last_name": "Lundak" , "city":"Kriens"}
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Salomon@example.com",  "username": "Salomon",  "first_name": "Salomon",  "last_name": "Adler" , "city":"Zurich" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Marco@example.com",  "username": "Marco",  "first_name": "Marco",  "last_name": "Volken" , "city": "St. Gallen" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Thomas@example.com",  "username": "Thomas",  "first_name": "Thomas",  "last_name": "Massie" , "city":"Zurich" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Robert@example.com",  "username": "Robert",  "first_name": "Robert",  "last_name": "Guillaume" , "city":"Zurich" }
+{ "password": "passwd123",  "is_superuser": 1,  "email": "Hugo@example.com",  "username": "Hugo",  "first_name": "Hugo",  "last_name": "Costa" , "city":"Zurich" }
