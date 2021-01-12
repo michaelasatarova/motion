@@ -29,19 +29,19 @@ build:
 #     - export CI_BUILD_REF_NAME=$CI_COMMIT_REF_NAME
 #     - docker-compose -p "$CI_PIPELINE_ID" -f docker-compose.ci.yml run app flake8 .
 
-# push image:
-#   stage: push
-#   only:
-#     - master
-#   script:
-#     - docker tag "$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" "$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME"
-#     - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME"
+push image:
+  stage: push
+  only:
+    - master
+  script:
+    - docker tag "$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" "$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME"
+    - docker push "$CI_REGISTRY_IMAGE":"$CI_COMMIT_REF_NAME"
 
-# push latest:
-#   stage: push
-#   script:
-#     - docker tag "$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" "$CI_REGISTRY_IMAGE":latest
-#     - docker push "$CI_REGISTRY_IMAGE":latest
+push latest:
+  stage: push
+  script:
+    - docker tag "$CI_PIPELINE_ID":"$CI_COMMIT_REF_NAME" "$CI_REGISTRY_IMAGE":latest
+    - docker push "$CI_REGISTRY_IMAGE":latest
 
 # cleanup:
 #   stage: cleanup
