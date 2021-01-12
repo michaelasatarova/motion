@@ -38,6 +38,7 @@ services:
 
 
 # these volumes create a directory in your computer so no matter what, they will not be deleted
+
 volumes:
   media-files:
   static-files:
