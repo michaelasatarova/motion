@@ -32,3 +32,4 @@ volumes:
   media-files:
   static-files:
   postgres:
+
