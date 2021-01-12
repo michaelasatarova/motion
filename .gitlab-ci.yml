@@ -2,7 +2,7 @@ stages:
   - pull
   - build
   # - lint
-  # - push
+   - push
   # - cleanup
   # - deploy
 
