@@ -20,9 +20,9 @@ const FriendsFromData =(props)=> {
                     <div className="friend-I-like"> 
                         <div className="groupOfTags">
                             
-                        {/* {props.hobby.map((hobby,index)=>
-                            <div className="tag" key={index}>{hobby}</div>
-                        )} */}
+                        {props.hobby.map((hobby,index)=>
+                            <div className="tag" key={index}>{hobby.hobby}</div>
+                        )}
                                                                                            
                         </div>
                         

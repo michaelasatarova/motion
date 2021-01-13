@@ -20,13 +20,14 @@ class FindFriends extends Component {
             <div> 
                     <PostHeader/>
                     <FindFriendsStyle>
-                   
-                    <Friend/>
-                    {this.props.friends.map((data, index) =>
-                    <FriendFromData key={index} country={data.country} city={data.city} username={data.username} about={data.about} avatar={data.avatar}
-                        hobby={data.hobby}
-                        />)} 
-                    
+
+                        <div className="find-friends-div1">
+                            <Friend/>
+                            {this.props.friends.map((data, index) =>
+                            <FriendFromData key={index} country={data.country} city={data.city} username={data.username} about={data.about} avatar={data.avatar}
+                                hobby={data.hobby}
+                                />)} 
+                        </div>
                     
                 
                     </FindFriendsStyle>           

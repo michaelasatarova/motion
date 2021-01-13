@@ -1,4 +1,4 @@
-
+import baseUrl from '../../Helpers/BaseUrl';
 
 export const GetPosts = () => (dispatch, getState) => {
     const token = getState().token
@@ -9,7 +9,7 @@ export const GetPosts = () => (dispatch, getState) => {
             "Authorization": `Bearer ${token}`
           }),
     };
-    fetch("https://michaela-motion-deploy.propulsion-learn.ch/backend/api/social/posts/", config)
+    fetch(`${baseUrl}/backend/api/social/posts/`, config)
         .then(response => response.json())
         .then((data)=>dispatch({type: 'GET_POSTS', payload: data}));
 }

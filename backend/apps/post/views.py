@@ -51,21 +51,21 @@ class ListUsersPost(generics.ListAPIView):
     Show Posts of logged in User
     """
     # TODO order seems not to work
-    ordering = ['created']
+    
     serializer_class = PostSerializer
     def get_queryset(self):
-        return Post.objects.filter(user=self.request.user)
+        return Post.objects.filter(user=self.request.user).order_by('-created')
 
 class ListOtherUserPosts(generics.ListAPIView):
     """
     Show Posts of logged in User
     """
     # TODO order seems not to work
-    ordering = ['created']
+    
     serializer_class = PostSerializer
     def get_queryset(self):
         id = self.kwargs.get('user_id')
-        return Post.objects.filter(user=id)
+        return Post.objects.filter(user=id).order_by('-created')
 
 
 class LikePost(generics.UpdateAPIView):

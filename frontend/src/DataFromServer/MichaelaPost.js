@@ -5,6 +5,8 @@ import {MichaelaPostStyled} from './style';
 import {connect} from 'react-redux';
 import { GetPosts } from '../Store/actions/Post';
 
+import baseUrl from '../Helpers/BaseUrl';
+
 class MichaelaPost extends Component{
     constructor() {
         super();  
@@ -28,7 +30,7 @@ class MichaelaPost extends Component{
             "Authorization": `Bearer ${this.props.token}`
           }),
         };
-        fetch("https://motion.propulsion-home.ch/backend/api/social/posts/", config)
+        fetch(`${baseUrl}/backend/api/social/posts/`, config) 
           .then((res) => res.json())  
           .then((data)=>{
               this.props.dispatch(GetPosts())
