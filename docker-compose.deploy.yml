@@ -8,7 +8,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - frontend:/frontend/build
+      - frontend:/frontend
       - ./nginx:/etc/nginx/conf.d
       - media-files:/media-files
       - static-files:/static-files
