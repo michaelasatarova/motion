@@ -9,7 +9,7 @@ export const GetPosts = () => (dispatch, getState) => {
             "Authorization": `Bearer ${token}`
           }),
     };
-    fetch("https://motion.propulsion-home.ch/backend/api/social/posts/", config)
+    fetch("https://michaela-motion-deploy.propulsion-learn.ch/backend/api/social/posts/", config)
         .then(response => response.json())
         .then((data)=>dispatch({type: 'GET_POSTS', payload: data}));
 }

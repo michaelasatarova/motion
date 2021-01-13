@@ -14,7 +14,7 @@ const MotionLeft = (props) =>{
         <div className="left">
                 <div className="purple-layer"></div>
                 <header>
-                    <img src={Logo} alt="Motion Logo"/>
+                    {/* <img src={Logo} alt="Motion Logo"/> */}
                     <h1>Motion</h1>
                     
                 </header>
