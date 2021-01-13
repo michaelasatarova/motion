@@ -23,8 +23,9 @@ class FindFriends extends Component {
                    
                     <Friend/>
                     {this.props.friends.map((data, index) =>
-                    <FriendFromData key={index} email={data.email} username={data.username} about={data.about} avatar={data.avatar}
-                        things_user_likes={data.things_user_likes}/>)} 
+                    <FriendFromData key={index} country={data.country} city={data.city} username={data.username} about={data.about} avatar={data.avatar}
+                        hobby ={data.hobby}
+                        />)} 
                     
                     
                 
