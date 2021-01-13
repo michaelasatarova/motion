@@ -27,7 +27,21 @@ SECRET_KEY = 'pixpje9yq_2a2h6m2b766gq(^0#&69cak-e&!*#mziqay98o!3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = ast.literal_eval(os.environ.get('DJANGO_DEBUG'))
 
+PRODUCTION_HOSTS = [
+    '138.68.96.230',
+    'michaela-motion-deploy.propulsion-learn.ch',
+    'www.michaela-motion-deploy.propulsion-learn.ch',
+]
+ 
 ALLOWED_HOSTS = ['*']
+# allow you to reach data via localhost
+CORS_ALLOWED_ORIGINS = [
+    "https://michaela-motion-deploy.propulsion-learn.ch",
+    "https://www.michaela-motion-deploy.propulsion-learn.ch",
+    "http://localhost:3000",
+    "http://127.0.0.1:8000"
+]
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -40,6 +54,7 @@ INSTALLED_APPS = [
 
     # Third-party apps
     'rest_framework',
+    'corsheaders',
     'drf_yasg',
 
     # Own apps
@@ -53,6 +68,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',  # Used for session authentication

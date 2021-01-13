@@ -13,3 +13,4 @@ dependencies:
     - pillow==8.0.1
     - gunicorn
     - flake8
+    - django-cors-headers
