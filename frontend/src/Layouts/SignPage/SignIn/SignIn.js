@@ -45,7 +45,7 @@ class SignIn extends Component{
             "Content-Type": "application/json",
           }),
         };
-        fetch("https://motion.propulsion-home.ch/backend/api/auth/token/", config)
+        fetch("https://michaela-motion-deploy.propulsion-learn.ch/backend/api/auth/token/", config)
           .then((res) => res.json())
           // retrieve token from api response
           .then((data) => {
