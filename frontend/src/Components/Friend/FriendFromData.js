@@ -16,7 +16,7 @@ const FriendsFromData =(props)=> {
                         <button>Follow</button>
                         <button>Add Friend</button>
                     </div>
-                    <p>{props.about_me}</p>
+                    <p>{props.about}</p>
                     <div className="friend-I-like"> 
                         <div className="groupOfTags">
                             

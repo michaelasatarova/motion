@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from apps.hobby.serializers import HobbySerializer
 
 User = get_user_model()
 
@@ -23,7 +24,8 @@ class PrivateUserSerializer(serializers.ModelSerializer):
                   'followers', 'followees', 'friends']
 
 
-class PublicUserSerializer(PrivateUserSerializer):
+class PublicUserSerializer(serializers.ModelSerializer):
+    hobby =HobbySerializer(many=True, read_only=True)
     class Meta:
         model = User
-        fields = User.PUBLIC_FIELDS
+        fields = ['id', 'email', 'username', 'first_name', 'last_name', 'country', 'city', 'about', 'avatar','hobby']

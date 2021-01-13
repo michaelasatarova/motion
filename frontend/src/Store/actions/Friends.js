@@ -1,4 +1,6 @@
 
+import baseUrl from '../../Helpers/BaseUrl';
+
 export const GetFriends = () => (dispatch, getState) => {
     const token = getState().token
     const config={
@@ -8,7 +10,7 @@ export const GetFriends = () => (dispatch, getState) => {
             "Authorization": `Bearer ${token}`
           }),
     };
-    fetch("https://michaela-motion-deploy.propulsion-learn.ch/backend/api/users/", config)
+    fetch(`${baseUrl}/backend/api/users/`, config)
         .then(response => response.json())
         .then((data)=>dispatch({type: 'GET_FRIENDS', payload: data}));
 }

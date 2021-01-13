@@ -13,18 +13,19 @@ class ListUsersView(ListAPIView):
     """
     serializer_class = PublicUserSerializer
 
+    queryset = User.objects.all()
     # Allows dynamic filtering for all public fields with multiple query parameters supporting lookups
-    def get_queryset(self):
-        queryset = User.objects.all()
-        queryparams = self.request.query_params
-        for key in queryparams.keys():
-            attr = key.split('__')[0]
-            if hasattr(User, attr) and attr in User.PUBLIC_FIELDS:
-                query = {f'{key}': queryparams.get(key)}
-                queryset = queryset.filter(**query)
-            else:
-                return []
-        return queryset
+    # def get_queryset(self):
+    #     queryset = User.objects.all()
+    #     queryparams = self.request.query_params
+    #     for key in queryparams.keys():
+    #         attr = key.split('__')[0]
+    #         if hasattr(User, attr) and attr in User.PUBLIC_FIELDS:
+    #             query = {f'{key}': queryparams.get(key)}
+    #             queryset = queryset.filter(**query)
+    #         else:
+    #             return []
+    #     return queryset
 
 
 class RetrieveUserView(RetrieveAPIView):

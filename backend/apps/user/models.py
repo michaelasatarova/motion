@@ -16,7 +16,7 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     # Fields that shall be treated as public and can be exposed to all logged-in users
-    PUBLIC_FIELDS = ('id', 'username', 'first_name', 'last_name', 'country','about')
+    PUBLIC_FIELDS = ('id', 'username', 'first_name', 'last_name', 'country','about', 'country', 'city','avatar' )
 
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=150)
