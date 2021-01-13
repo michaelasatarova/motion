@@ -238,7 +238,8 @@ hr{
     .bp-main-header{
         flex-direction: column;
         .searching, .search-box{
-            width: 100%;          
+            width: 100%; 
+            padding: 10px 20px;         
         }
     }
 

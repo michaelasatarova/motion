@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const DataFetchPostsSectionStyled = styled.section`
-width:43%;
+width:48%;
 background-color:#fff;
-margin:10px;
-padding:10px;
+margin:5px;
+padding:5px;
 
 .postHeader{
     display:flex;
@@ -18,11 +18,24 @@ padding:10px;
     .created{
         margin-top:0px;
         h1{
-            margin-top:0px; 
+            margin-top:10px; 
+            margin-bottom:7px;
+        }
+        p{
+            margin-top:5px;
         }
     }
 }
-
+.postContent{
+    margin-left:20px;
+}
+@media (max-width: 1520px) {
+        width:45%;
+  }
+  @media (max-width: 678px) {
+        width:100%;
+    
+  }
 `
 export const LikeAndShareStyled = styled.section`
 
@@ -43,7 +56,7 @@ export const LikeAndShareStyled = styled.section`
 export const MichaelaPostStyled = styled.section`
     display: flex;
     width: 100%;
-    width: 43%;
+    width: 47%;
     background-color: #fff;
     margin: 10px;
     padding: 10px;
@@ -55,16 +68,18 @@ img{
 }
 
 .bp-posts{
-    width:100%;
-    background-color: #fff;
+    width:85%;
+   // background-color: #fff;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items:center;
     padding:20px;
     margin:20px;
     input, input:focus{
-        width:500px;
+        width:300px;
         outline:none;
         border: none;
+        margin-left:10px;
     }
     input::placeholder {
         font-size: 20px;
@@ -77,4 +92,12 @@ img{
         cursor:pointer;
     }
 }
+@media (max-width: 1520px) {
+        width:44%;
+    
+  }
+  @media (max-width: 678px) {
+        width:100%;
+    
+  }
 `

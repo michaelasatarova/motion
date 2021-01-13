@@ -33,8 +33,10 @@ class FindFriends extends Component {
     )}
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+    console.log("Friends: ",state.friends);
+    return {
    friends: state.friends,
-});
+}};
 
 export default connect(mapStateToProps)(FindFriends);

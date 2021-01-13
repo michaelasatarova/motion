@@ -74,7 +74,7 @@ class SignIn extends Component{
                         <h1>Sign In</h1>
                         <label className="name">
                             <FontAwesomeIcon className="i" icon={faUserCircle} size = '1x'/>
-                            <input type="text" placeholder="Username" value={this.state.email} onChange={this.handleemail}/>
+                            <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleemail}/>
               
                         </label>
                         <label className="password">

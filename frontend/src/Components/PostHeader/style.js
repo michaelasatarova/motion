@@ -79,5 +79,9 @@ h3{
         color:#fff;
     }
      
-
+    @media (max-width: 700px) {
+        .bp-h-left{
+            width:100%;
+        }
+  }
 `
