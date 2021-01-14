@@ -106,6 +106,7 @@ margin:auto;
     justify-content:space-around;
     border-top: 3px solid #bcb7b79c;
     .pd2-col{
+        text-align:center;
         h1{
             margin-bottom:5px;
         }
@@ -116,6 +117,9 @@ margin:auto;
     }
 }
 
+.active-link{
+    border-bottom: 5px solid purple;
+}
 
 
 ` 

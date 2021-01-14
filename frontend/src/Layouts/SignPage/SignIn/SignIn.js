@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Link } from 'react-router-dom';
 import MotionLeft from '../../../Components/MotionLeft';
 import {SectionStyled, StyleRow } from './styles';
+import baseUrl from '../../../Helpers/BaseUrl';
 
 //STORE
 import { connect } from "react-redux";
@@ -35,7 +36,7 @@ class SignIn extends Component{
 
       handleSubmit = (e) => {
         e.preventDefault();
-    
+
         // send email and password to api
         const { password } = this.state;
         const config = {
@@ -45,7 +46,7 @@ class SignIn extends Component{
             "Content-Type": "application/json",
           }),
         };
-        fetch("https://michaela-motion-deploy.propulsion-learn.ch/backend/api/auth/token/", config)
+        fetch(`${baseUrl}/backend/api/auth/token/`, config)
           .then((res) => res.json())
           // retrieve token from api response
           .then((data) => {

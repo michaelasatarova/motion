@@ -23,10 +23,11 @@ class FindFriends extends Component {
 
                         <div className="find-friends-div1">
                             <Friend/>
-                            {this.props.friends.map((data, index) =>
+                            
+                            {this.props.friends.length ? this.props.friends.map((data, index) =>
                             <FriendFromData key={index} country={data.country} city={data.city} username={data.username} about={data.about} avatar={data.avatar}
-                                hobby={data.hobby}
-                                />)} 
+                                hobby={data.hobby} 
+                                />): 'Loading'} 
                         </div>
                     
                 

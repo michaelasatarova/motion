@@ -37,6 +37,10 @@ class PostList(generics.ListCreateAPIView):
     serializer_class = PostSerializer
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+        
+    def get_queryset(self):
+        return Post.objects.all().order_by('-created')
+        
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -51,7 +55,7 @@ class ListUsersPost(generics.ListAPIView):
     Show Posts of logged in User
     """
     # TODO order seems not to work
-    
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
     def get_queryset(self):
         return Post.objects.filter(user=self.request.user).order_by('-created')

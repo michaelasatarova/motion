@@ -1,3 +1,4 @@
+import baseUrl from '../../Helpers/BaseUrl';
 
 export const UserAccount = () => (dispatch, getState) => {
     const token = getState().token
@@ -8,7 +9,7 @@ export const UserAccount = () => (dispatch, getState) => {
             "Authorization": `Bearer ${token}`
           }),
     };
-    fetch("https://motion.propulsion-home.ch/backend/api/users/me/", config)
+    fetch(`${baseUrl}/backend/api/users/me/`, config)
         .then(response => response.json())
         .then((data)=>dispatch({type: 'USER_ACCOUNT', payload: data}));
 }

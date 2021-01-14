@@ -8,7 +8,7 @@ User = get_user_model()
 class NestedUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username']
+        fields = ['id', 'username', 'avatar']
         ref_name = None  # Prevents yasg docs from displaying 'NestedUser' as model name for nested user fields
 
 

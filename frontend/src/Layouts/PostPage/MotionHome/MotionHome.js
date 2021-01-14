@@ -57,7 +57,7 @@ class MotionHome extends React.Component {
                             {this.props.posts.map((data, index)=>
                             <PostContent key={index} content={data.content} likes={data.amount_of_likes} 
                             created={this.getCurrentDate(data.created)} 
-                            shared={data.shared} user={data.user.username}/>)} 
+                            shared={data.shared} user={data.user.username} avatar ={data.user.avatar}/>)} 
                         </div> 
                    </PostStyle>     
             </div>

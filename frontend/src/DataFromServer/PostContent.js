@@ -2,7 +2,7 @@ import React from 'react';
 import {DataFetchPostsSectionStyled, LikeAndShareStyled } from './style';
 
 //img
-import avatar from '../assets/avatar.jpg';
+//import avatar from '../assets/avatar.jpg';
 
 //Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,7 +14,7 @@ const PostContent =(props)=> {
         <DataFetchPostsSectionStyled >
 
             <div className= "postHeader">
-                <img src={avatar} alt=""/>
+                <img src={props.avatar} alt=""/>
                 <div className= "created">             
                     <h1> {props.user} </h1>
                     <p>{props.created} </p>              
