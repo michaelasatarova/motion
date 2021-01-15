@@ -1,6 +1,6 @@
 import React from "react";
 import {StyledMotion} from './style';
-import Logo from '../assets/logo.png'
+
 
 //Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,7 +14,7 @@ const MotionLeft = (props) =>{
         <div className="left">
                 <div className="purple-layer"></div>
                 <header>
-                    {/* <img src={Logo} alt="Motion Logo"/> */}
+                    
                     <h1>Motion</h1>
                     
                 </header>

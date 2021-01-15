@@ -13,12 +13,16 @@ z-index:-1;
 export const ProfileBg2 = styled.section`
 background:#F2F2F2;
 
+
 `
 
 export const AccountProfileStyled = styled.section`
 width:1100px;
 display:flex;
+flex-wrap:wrap;
 margin: auto;
 padding-bottom:20px;
+justify-content:center;
+
 
 `

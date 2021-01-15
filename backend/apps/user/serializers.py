@@ -6,9 +6,10 @@ User = get_user_model()
 
 
 class NestedUserSerializer(serializers.ModelSerializer):
+    hobby =HobbySerializer(many=True, read_only=True)
     class Meta:
         model = User
-        fields = ['id', 'username', 'avatar']
+        fields = ['id', 'email', 'username', 'first_name', 'last_name', 'country', 'city', 'about', 'avatar','hobby']
         ref_name = None  # Prevents yasg docs from displaying 'NestedUser' as model name for nested user fields
 
 

@@ -10,6 +10,7 @@ export const BlogPostGalleryStyle = styled.section`
         height:40px;
         margin:15px;
     }
+   
 }
 .gallery-bp-post-gallery{
     text-align:center;
@@ -19,6 +20,9 @@ export const BlogPostGalleryStyle = styled.section`
     padding:10px;
     margin: 10px;
     background-color:#fff;
+    p{
+        max-width:300px;
+    } 
 }
 
 .bp-like-and-share{

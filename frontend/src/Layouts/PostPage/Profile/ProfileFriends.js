@@ -1,22 +1,22 @@
 import React from 'react';
 import PostHeader from '../../../Components/PostHeader/PostHeader';
-import ProfileAccount from '../../../Components/ProfileAccount/ProfileAccount';
+import ProfileAccountFriends from '../../../Components/ProfileAccount/ProfileAccountFriends';
 import { ProfileBg, ProfileBg2} from  './style';
 
 
 
 
-const Profile =()=> {
+const ProfileFriends =()=> {
     return(
         <div> 
              <PostHeader/>
              <ProfileBg/>
              <ProfileBg2>
-                <ProfileAccount/>
+                <ProfileAccountFriends/>
             </ProfileBg2>
              
         </div>
     )
 }
 
-export default Profile;
+export default ProfileFriends;

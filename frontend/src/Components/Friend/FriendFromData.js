@@ -33,4 +33,5 @@ const FriendsFromData =(props)=> {
     )
 }
 
+
 export default FriendsFromData;

@@ -8,12 +8,16 @@ import SignUp from '../Layouts/SignPage/SignUp/SignUp';
 import Congratulations from '../Layouts/SignPage/Congratulations/Congratulations'
 import Verification from '../Layouts/SignPage/Verification/Verification'
 import MotionHome from '../Layouts/PostPage/MotionHome/MotionHome';
-import Profile from '../Layouts/PostPage/Profile/Profile';
 import EditAccount from '../Layouts/PostPage/EditAccount/EditAccount';
 import FindFriends from '../Layouts/PostPage/FindFriends/FindFriends'
 import YourFriends from '../Layouts/PostPage/YourFriends/YourFriends';
 import NotFound from '../Layouts/PageNotFound/NotFound';
 import {withAuth} from '../HOC/withAuth';
+
+import ProfilePosts from '../Layouts/PostPage/Profile/ProfilePosts';
+import ProfileFriends from '../Layouts/PostPage/Profile/ProfileFriends';
+import ProfileFollowers from '../Layouts/PostPage/Profile/ProfileFollowers';
+import ProfileFollowees from '../Layouts/PostPage/Profile/ProfileFollowees';
 
 const Routes = () => {
     return (
@@ -24,10 +28,15 @@ const Routes = () => {
                 <Route path='/congratulations' component={Congratulations} />
                 <Route path='/verification' component={Verification} />
                 <Route path='/motionhome' component={withAuth(MotionHome)} />
-                <Route path='/profile' component={Profile} />
+                <Route path='/profile' component={ProfilePosts} />
                 <Route path='/editaccount' component={EditAccount} />
                 <Route path='/findfriends' component={FindFriends} />
                 <Route path='/yourfriends' component={YourFriends} />
+
+                <Route path='/ProfilePosts' component={ProfilePosts} />
+                <Route path='/ProfileFriends' component={ProfileFriends} />
+                <Route path='/ProfileFollowers' component={ProfileFollowers} />
+                <Route path='/ProfileFollowees' component={ProfileFollowees} />
 
                 <Route component={NotFound} />
             </Switch>

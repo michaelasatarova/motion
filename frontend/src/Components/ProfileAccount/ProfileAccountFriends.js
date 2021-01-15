@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import {UserAccount} from '../../Store/actions/UserAccount';
 import {UserPosts} from '../../Store/actions/UserPosts';
 import {connect} from 'react-redux';
-import CustomPost from '../BlogPost/CustomPost';
 import {AccountProfileStyled} from  '../../Layouts/PostPage/Profile/style';
 
 
-class ProfileAccount extends Component {
+class ProfileAccountFriends extends Component {
    
     componentDidMount(){
         console.log('mounting in UserAccount');
@@ -67,8 +66,8 @@ class ProfileAccount extends Component {
                                 </div>
 
                                 <div className="pd2 ">
-                                    <div className="pd2-col active-link">
-                                    <h1>{this.props.userPosts.length }</h1>
+                                    <div className="pd2-col ">
+                                        <h1>{this.props.userPosts.length }</h1>
                                         <Link to='/ProfilePosts'><h3>Posts</h3></Link>
                                     </div>
 
@@ -77,7 +76,7 @@ class ProfileAccount extends Component {
                                         <h3>Likes</h3>
                                     </div>
 
-                                    <div className="pd2-col">
+                                    <div className="pd2-col active-link">
                                         <h1>{this.props.userAccount.friends.length }</h1>
                                         <Link to='/ProfileFriends'><h3>Friends</h3></Link>
                                     </div>
@@ -98,11 +97,7 @@ class ProfileAccount extends Component {
                      : 'Loading'}
 
                     <AccountProfileStyled>                     
-                    {this.props.userPosts.length ? this.props.userPosts.map((data, index) =>
-                        <CustomPost key={index} username={data.user.username} avatar={data.user.avatar} content={data.content} created={data.created}
-                               
-                                />): 'Loading'} 
-                      {/* <CustomPost/>             */}
+                                  
                     </AccountProfileStyled>
 
                 </ProfileStyled>
@@ -118,4 +113,4 @@ const mapStateToProps = (state) => {
         userPosts:state.userPosts,
 }};
 
-export default connect(mapStateToProps)(ProfileAccount);
+export default connect(mapStateToProps)(ProfileAccountFriends);

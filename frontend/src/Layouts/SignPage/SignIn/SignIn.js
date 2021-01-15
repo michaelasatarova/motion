@@ -22,6 +22,8 @@ class SignIn extends Component{
         this.state = {
           email: "",
           password: "",
+          emailError: "",
+          passwordError:"",
         };
       }
 
@@ -34,9 +36,52 @@ class SignIn extends Component{
         this.setState({ email: event.target.value });
       };
 
-      handleSubmit = (e) => {
-        e.preventDefault();
+      // handleChange = event =>{
+      //   const isCheckbox = event.target.type === "email";
 
+      //   this.setState({
+      //     [event.target.name]: isCheckbox ?
+      //     event.target.checked
+      //     :event.target.value
+      //   });
+      // };
+      
+      //validation
+      validation =()=>{
+        let emailError
+        //let passwordError
+
+         //email validation
+            if(!this.state.email.includes('@')){
+              emailError = "invalid Email";
+            }else if (!this.state.email) {
+              emailError = "email cannot be blank";
+            }else{
+              emailError = "invalid email";
+            }
+
+            //channging state in constructor 
+            if(emailError){
+              this.setState({emailError});
+              return false;
+            }
+            return true;
+          };
+
+
+
+      //sending form
+       handleSubmit = (e) => {
+        e.preventDefault();
+        const isValid = this.validation();
+        let emailError;
+        
+        if (isValid) {
+          console.log(this.state);
+          // clear form
+          this.setState(emailError);
+        }
+  
         // send email and password to api
         const { password } = this.state;
         const config = {
@@ -55,17 +100,19 @@ class SignIn extends Component{
             // set token to localstorage
             localStorage.setItem("token", data.access);
             this.props.history.push('/motionhome');
-          });
+          });        
       };
-
+ 
 
     render(){
         console.log("in the render", this.props);
     return (
 
             <StyleRow >
+              
                 <MotionLeft/>
                 <SectionStyled>
+                  
                 <div className="right">
                     <div className="header">
                         <p>Don´t have an account?</p>
@@ -76,16 +123,19 @@ class SignIn extends Component{
                         <label className="name">
                             <FontAwesomeIcon className="i" icon={faUserCircle} size = '1x'/>
                             <input type="email" placeholder="Email" value={this.state.email} onChange={this.handleemail}/>
+                            {this.state.emailError ?<p>{this.state.emailError}</p> : null}
               
                         </label>
                         <label className="password">
                             <FontAwesomeIcon className="i" icon={faLock} size = '1x'/>
-                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/>            
+                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.handlePassword}/> 
+                            {this.state.emailError ?<p>{this.state.passwordError}</p>: null}           
                         </label>
                     </form>
                     <div className='toMotion'><Link to="/motionhome"><button className="signin" onClick={this.handleSubmit}>Sign In</button></Link></div>
                 </div>
                 </SectionStyled>
+
             </StyleRow>
         )}
 };

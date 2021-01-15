@@ -2,7 +2,8 @@ const initialState = {
   token: null,
   posts: [],
   friends:[],
-  userAccount:[],
+  userAccount: null,
+  userPosts:[],
 };
 
 export const authReducer = (state = initialState, action) => {
@@ -23,6 +24,10 @@ export const authReducer = (state = initialState, action) => {
     case "USER_ACCOUNT":{
       const userAccount = action.payload;
       return { ...state, userAccount };
+    }
+    case "USER_POSTS":{
+      const userPosts = action.payload;
+      return { ...state, userPosts };
     }
     default:
       return state;

@@ -4,6 +4,11 @@ import styled from "styled-components";
 export const ProfileStyled = styled.section`
 margin:auto;
 
+a{
+    color:#323232;
+    text-decoration:none;
+}
+
 .profile{
     width:1100px;
     display:flex;
