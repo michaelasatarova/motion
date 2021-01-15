@@ -5,7 +5,7 @@ import {UserAccount} from '../../Store/actions/UserAccount';
 import {UserPosts} from '../../Store/actions/UserPosts';
 import {connect} from 'react-redux';
 import {AccountProfileStyled} from  '../../Layouts/PostPage/Profile/style';
-
+import FriendFromData from '../Friend/FriendFromData';
 
 class ProfileAccountFollowees extends Component {
    
@@ -72,7 +72,7 @@ class ProfileAccountFollowees extends Component {
                                     </div>
 
                                     <div className="pd2-col">
-                                        <h1></h1>
+                                        <h1>0</h1>
                                         <h3>Likes</h3>
                                     </div>
 
@@ -97,7 +97,10 @@ class ProfileAccountFollowees extends Component {
                      : 'Loading'}
 
                     <AccountProfileStyled>                     
-                                 
+                    {this.props.userAccount ? this.props.userAccount.followees.map((data, index) =>
+                        <FriendFromData key={index} country={data.country} city={data.city} username={data.username} about={data.about} avatar={data.avatar}
+                            hobby={data.hobby} 
+                        />): 'Loading'}    
                     </AccountProfileStyled>
 
                 </ProfileStyled>
