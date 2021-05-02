@@ -31,7 +31,7 @@ const Routes = () => {
                 <Route path='/profile' component={ProfilePosts} />
                 <Route path='/editaccount' component={EditAccount} />
                 <Route path='/findfriends' component={FindFriends} />
-                <Route path='/yourfriends' component={YourFriends} />
+                {/* <Route path='/yourfriends' component={YourFriends} /> */}
 
                 <Route path='/ProfilePosts' component={ProfilePosts} />
                 <Route path='/ProfileFriends' component={ProfileFriends} />
